@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/friendsButtonLayout">
+        <Button
+            android:id="@+id/addFriendsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goToAddFriends"
+            android:text="Add Friends" />
+        <Button
+            android:id="@+id/friendRequestsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goToFriendRequests"
+            android:text="Friend Requests"
+            android:layout_below="@+id/addFriendsButton"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/friendsButtonLayout"
+        android:id="@+id/friendsListTextLayout">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friends List"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/friendsListTextLayout">
+
+        <!-- A RecyclerView with some commonly used attributes -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/friendsActivityRecyclerView"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

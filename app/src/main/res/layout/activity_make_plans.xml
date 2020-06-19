@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        tools:context=".ui.makePlansActivity" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/white_border"
+        android:id="@+id/relLayout1">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify"
+            />
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:id="@+id/input_search"
+            android:background="@null"
+            android:hint="Enter Address, City of Zip Code"
+            android:imeOptions="actionSearch"
+            android:inputType="text"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/relLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_gps"
+        android:src="@drawable/ic_gps"/>
+
+    <RelativeLayout
+        android:background="@drawable/white_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map"
+        android:id="@+id/RadiiLayout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drag pin to center of desired search area and set radius:"
+            android:id="@+id/explainingthemapandradius"/>
+            <Spinner
+                android:layout_below="@+id/explainingthemapandradius"
+                android:id="@+id/radiiSelection"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/white_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RadiiLayout"
+        android:id="@+id/tagLayout">
+        <Button
+            android:id="@+id/placeTags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select your activity"
+            android:onClick="showPopup" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/white_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tagLayout"
+        android:id="@+id/startDateLayout">
+        <EditText
+            android:id="@+id/startDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Enter Event Date" />
+
+        <TextView
+            android:id="@+id/confirmStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/startDateText"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/white_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startDateLayout"
+        android:id="@+id/endDateLayout">
+        <EditText
+            android:id="@+id/endDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date when voting will not be allowed" />
+        <TextView
+            android:id="@+id/confirmVoteDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/endDateText"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/endDateLayout"
+        android:text="invite friends to join the event"
+        android:id="@+id/inviteFriends"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inviteFriends"
+        android:text="Send Invite"
+        android:id="@+id/sendInvite"/>
+
+</RelativeLayout>
+

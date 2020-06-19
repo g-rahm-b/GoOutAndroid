@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bar"
+        android:icon="@drawable/ic_bar"
+        android:title="Bar" />
+    <item android:id="@+id/nightclub"
+        android:icon="@drawable/ic_club"
+        android:title="Nightclub"
+         />
+    <item android:id="@+id/restaurant"
+        android:icon="@drawable/ic_restaurant"
+        android:title="Restaurant" />
+    <item android:id="@+id/spa"
+        android:icon="@drawable/ic_spa"
+        android:title="Spa" />
+    <item android:id="@+id/amusementPark"
+        android:icon="@drawable/ic_amusementpark"
+        android:title="Amusement Park" />
+</menu>
